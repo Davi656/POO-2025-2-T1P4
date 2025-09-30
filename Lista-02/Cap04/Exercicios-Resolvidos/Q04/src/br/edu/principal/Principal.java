@@ -9,13 +9,13 @@ public class Principal {
         double num1, num2, num3;
 
         System.out.print("Digite o primeiro número: ");
-        num1 = sc.nextDouble();
+    num1 = sc.nextDouble();
 
         System.out.print("Digite o segundo número: ");
-        num2 = sc.nextDouble();
+    num2 = sc.nextDouble();
 
         System.out.print("Digite o terceiro número: ");
-        num3 = sc.nextDouble();
+    num3 = sc.nextDouble();
 
         if (num1 < num2 && num1 < num3) {
             if (num2 < num3) {
@@ -44,4 +44,5 @@ public class Principal {
 
         sc.close();
     }
+
 }
