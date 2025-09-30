@@ -1,29 +1,31 @@
-package br.edu.principal;
-
+package Exerc.Propostos;
 import java.util.Scanner;
 
-public class Principal {
-	public static void main(String[] args) {
-		
-		Scanner sc = new Scanner(System.in);
-		
-		double n1 , n2 , media;
-		
-		System.out.println("Digite a primeira nota: ");
-		n1 = sc.nextDouble();
-		
-		System.out.println("Digite a segunda nota: ");
-		n2 = sc.nextDouble();
-	
-		media = (n1+n2)/2;
-		
-		if (media >= 0 && media < 3) {
-			System.out.println("Aluno reprovado com média: " + media);
-		} else if (media >= 3 && media < 7) {
-			System.out.println("Aluno irá fazer o exame - média atual: " + media);
-		} else {
-			System.out.println("Aluno Aprovado com média: " + media);
-		}
-		
-	}
+public class Q02 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Vamos calcular a média de um aluno e informar a situação.");
+        System.out.print("Digite a primeira nota: ");
+        double n1 = sc.nextDouble();
+
+        System.out.print("Digite a segunda nota: ");
+        double n2 = sc.nextDouble();
+
+        double media = (n1 + n2) / 2;
+        System.out.println("A média do aluno é: " + media);
+
+        if (media < 3) {
+            System.out.println("O aluno está reprovado.");
+        } else if (media < 7) {
+            System.out.println("O aluno ficou para exame.");
+            double notaExame = 6 - media;
+            System.out.println("Para ser aprovado, precisa tirar pelo menos: " + notaExame);
+        } else {
+            System.out.println("Parabéns! O aluno foi aprovado!");
+        }
+
+        sc.close();
+    }
 }
+
