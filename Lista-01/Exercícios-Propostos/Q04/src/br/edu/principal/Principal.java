@@ -4,18 +4,17 @@ import java.util.Scanner;
 
 public class Principal {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        
-        double nota1,nota2;
-        
+        Scanner entrada = new Scanner(System.in);
+
         System.out.print("Digite a primeira nota: ");
-        nota1 = sc.nextDouble();
+        double n1 = entrada.nextDouble();
 
         System.out.print("Digite a segunda nota: ");
-        nota2 = sc.nextDouble();
+        double n2 = entrada.nextDouble();
 
-        double media = ((nota1*2) + (nota2*3)) / (2+3);
+        double somaPesos = 2 + 3;
+        double mediaPonderada = (n1 * 2 + n2 * 3) / somaPesos;
 
-        System.out.printf("A média ponderada é: " + media);
+        System.out.println("A média ponderada é: " + mediaPonderada);
     }
 }
