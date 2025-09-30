@@ -9,10 +9,10 @@ public class Principal {
 		int n1 , n2;
 		
 		System.out.println("Digite um número(n1):");
-		n1 = sc.nextInt();
+	n1 = sc.nextInt();
 		
 		System.out.println("Digite outro número(n2):");
-		n2 = sc.nextInt();	    
+	n2 = sc.nextInt();	    
 		
 		if (n1>n2) {
 			System.out.println("n2 (" + n2 + ") é menor do que n1 (" + n1 + ")");
@@ -22,3 +22,4 @@ public class Principal {
 	}
 
 }
+
