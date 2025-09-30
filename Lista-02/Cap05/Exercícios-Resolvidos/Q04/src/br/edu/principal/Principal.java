@@ -5,64 +5,68 @@ import java.util.Scanner;
 public class Principal {
 
     public static void main(String[] args) {
-        int cont, cod, num_vei, num_acid;
-        int maior, cid_maior, menor, cid_menor;
-        int soma_vei, soma_acid, cont_acid;
-
         Scanner sc = new Scanner(System.in);
 
-        cid_menor = 0;
-        cid_maior = 0;
-        maior = 0;
-        menor = 0;
-        soma_vei = 0;
-        soma_acid = 0;
-        cont_acid = 0;
+        int codCidade, numVeiculos, numAcidentes;
+        int maiorIndice = 0, menorIndice = 0;
+        int codMaior = 0, codMenor = 0;
+        int somaVeiculos = 0, somaAcidentesPequenas = 0;
+        int contadorPequenas = 0;
 
-        for (cont = 1; cont <= 5; cont++) {
-            System.out.print("Digite o código da cidade: ");
-            cod = sc.nextInt();
-            System.out.print("Digite o número de veículos de passeio: ");
-            num_vei = sc.nextInt();
-            System.out.print("Digite o número de acidentes com vítimas: ");
-            num_acid = sc.nextInt();
+        System.out.println("=== Levantamento de Dados de Trânsito ===\n");
 
-            if (cont == 1) {
-                maior = num_acid;
-                cid_maior = cod;
-                menor = num_acid;
-                cid_menor = cod;
+        for (int i = 1; i <= 5; i++) {
+            System.out.printf("Cidade %d:\n", i);
+
+            System.out.print("→ Código da cidade: ");
+        codCidade = sc.nextInt();
+
+            System.out.print("→ Número de veículos de passeio: ");
+        numVeiculos = sc.nextInt();
+
+            System.out.print("→ Número de acidentes com vítimas: ");
+         numAcidentes = sc.nextInt();
+            System.out.println();
+
+            if (i == 1) {
+                maiorIndice = numAcidentes;
+                 menorIndice = numAcidentes;
+                 codMaior = codCidade;
+                  codMenor = codCidade;
             } else {
-                if (num_acid > maior) {
-                    maior = num_acid;
-                    cid_maior = cod;
+                if (numAcidentes > maiorIndice) {
+                    maiorIndice = numAcidentes;
+                    codMaior = codCidade;
                 }
-                if (num_acid < menor) {
-                    menor = num_acid;
-                    cid_menor = cod;
+                if (numAcidentes < menorIndice) {
+                    menorIndice = numAcidentes;
+                    codMenor = codCidade;
                 }
             }
 
-            soma_vei += num_vei;
+            somaVeiculos += numVeiculos;
 
-            if (num_vei < 2000) {
-                soma_acid += num_acid;
-                cont_acid++;
+            if (numVeiculos < 2000) {
+                somaAcidentesPequenas += numAcidentes;
+                contadorPequenas++;
             }
         }
 
-        double media_vei = soma_vei / 5.0;
-        System.out.println("\n== RESULTADOS ==");
-        System.out.println("Maior índice de acidentes: " + maior + " - Cidade: " + cid_maior);
-        System.out.println("Menor índice de acidentes: " + menor + " - Cidade: " + cid_menor);
-        System.out.printf("Média de veículos nas cinco cidades: %.2f\n", media_vei);
+        double mediaVeiculos = somaVeiculos / 5.0;
 
-        if (cont_acid == 0) {
-            System.out.println("Nenhuma cidade com menos de 2000 veículos.");
+        System.out.println("=== RESULTADOS FINAIS ===");
+        System.out.printf(" Cidade com MAIOR número de acidentes: %d (%d acidentes)\n", codMaior, maiorIndice);
+        System.out.printf(" Cidade com MENOR número de acidentes: %d (%d acidentes)\n", codMenor, menorIndice);
+        System.out.printf(" Média de veículos nas cinco cidades: %.2f\n", mediaVeiculos);
+
+        if (contadorPequenas == 0) {
+            System.out.println(" Nenhuma cidade com menos de 2000 veículos registrada.");
         } else {
-            double media_acid = soma_acid / (double) cont_acid;
-            System.out.printf("Média de acidentes nas cidades com menos de 2000 veículos: %.2f\n", media_acid);
+            double mediaAcidentesPequenas = somaAcidentesPequenas / (double) contadorPequenas;
+            System.out.printf(" Média de acidentes em cidades com menos de 2000 veículos: %.2f\n", mediaAcidentesPequenas);
         }
 
+        System.out.println("\nObrigado por usar o sistema!");
+        sc.close();
     }
 }
