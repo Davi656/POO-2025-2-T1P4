@@ -9,13 +9,13 @@ public class Principal {
         int n1, n2, n3;
         
         System.out.print("Digite o primeiro número (n1): ");
-        n1 = sc.nextInt();
+    n1 = sc.nextInt();
         
         System.out.print("Digite o segundo número (n2): ");
-        n2 = sc.nextInt();
+    n2 = sc.nextInt();
         
         System.out.print("Digite o terceiro número (n3): ");
-        n3 = sc.nextInt();
+    n3 = sc.nextInt();
         
         if (n1 >= n2 && n1 >= n3) {
             System.out.print("O maior número é: " + n1);
@@ -26,3 +26,4 @@ public class Principal {
         }
     }
 }
+
