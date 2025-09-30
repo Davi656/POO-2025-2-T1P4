@@ -7,11 +7,12 @@ public class Principal {
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Digite o número de termos: ");
-        int n = sc.nextInt();
+        
+         int n = sc.nextInt();
 
-        int seq1 = 2;
+         int seq1 = 2;
         int seq2 = 7;
-        int seq3 = 3;
+         int seq3 = 3;
 
         System.out.println("Série gerada:");
         for (int i = 1; i <= n; i++) {
@@ -32,4 +33,5 @@ public class Principal {
         }
 
     }
+
 }
