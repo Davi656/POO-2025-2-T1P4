@@ -8,9 +8,10 @@ public class Principal {
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Digite um número inteiro: ");
-        int num = sc.nextInt();
+    int num = sc.nextInt();
 
-        calculo.verificarPositivoOuNegativo(num);
+    calculo.verificarPositivoOuNegativo(num);
         
     }
+
 }
