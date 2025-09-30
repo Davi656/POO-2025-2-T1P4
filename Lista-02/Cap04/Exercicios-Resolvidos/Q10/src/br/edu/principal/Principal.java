@@ -3,29 +3,34 @@ package br.edu.principal;
 import java.util.Scanner;
 
 public class Principal {
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
+        System.out.println("Vamos comparar duas datas!");
         System.out.println("Digite a primeira data:");
         System.out.print("Dia: ");
-        int d1 = sc.nextInt();
+         int dia1 = sc.nextInt();
         System.out.print("Mês: ");
-        int m1 = sc.nextInt();
+         int mes1 = sc.nextInt();
         System.out.print("Ano: ");
-        int a1 = sc.nextInt();
+         int ano1 = sc.nextInt();
 
-        System.out.println("Digite a segunda data:");
+        System.out.println("\nDigite a segunda data:");
         System.out.print("Dia: ");
-        int d2 = sc.nextInt();
+         int dia2 = sc.nextInt();
         System.out.print("Mês: ");
-        int m2 = sc.nextInt();
+         int mes2 = sc.nextInt();
         System.out.print("Ano: ");
-        int a2 = sc.nextInt();
+         int ano2 = sc.nextInt();
 
-        if (a1 > a2 || (a1 == a2 && m1 > m2) || (a1 == a2 && m1 == m2 && d1 > d2)) {
-            System.out.printf("A maior data é: %02d/%02d/%04d\n", d1, m1, a1);
+        System.out.println();
+        if (ano1 > ano2 || (ano1 == ano2 && mes1 > mes2) || (ano1 == ano2 && mes1 == mes2 && dia1 > dia2)) {
+            System.out.printf("A data mais recente é: %02d/%02d/%04d\n", dia1, mes1, ano1);
+        } else if (ano1 == ano2 && mes1 == mes2 && dia1 == dia2) {
+            System.out.println("As duas datas são iguais!");
         } else {
-            System.out.printf("A maior data é: %02d/%02d/%04d\n", d2, m2, a2);
+            System.out.printf("A data mais recente é: %02d/%02d/%04d\n", dia2, mes2, ano2);
         }
 
         sc.close();
