@@ -7,18 +7,18 @@ public class Q01 {
 
         System.out.println("Olá! Vamos calcular a média de um aluno.");
         System.out.print("Digite a primeira nota: ");
-        double n1 = sc.nextDouble();
+     double n1 = sc.nextDouble();
 
         System.out.print("Digite a segunda nota: ");
-        double n2 = sc.nextDouble();
+     double n2 = sc.nextDouble();
 
         System.out.print("Digite a terceira nota: ");
-        double n3 = sc.nextDouble();
+     double n3 = sc.nextDouble();
 
         System.out.print("Digite a quarta nota: ");
-        double n4 = sc.nextDouble();
+     double n4 = sc.nextDouble();
 
-        double media = (n1 + n2 + n3 + n4) / 4;
+     double media = (n1 + n2 + n3 + n4) / 4;
         System.out.println("A média do aluno é: " + media);
 
         if (media >= 7) {
@@ -30,4 +30,5 @@ public class Q01 {
         sc.close();
     }
 }
+
 
